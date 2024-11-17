@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FileAnalysis">
+
+    <TextView
+        android:id="@+id/fileNameView"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:fontFamily="serif-monospace"
+        android:gravity="center"
+        android:text="File Name"
+        android:textColor="#000080"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.107" />
+
+    <Button
+        android:id="@+id/backButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        app:backgroundTint="@color/maroon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <ScrollView
+        android:id="@+id/parent_scroll"
+        android:layout_width="412dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fileNameView"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/wordCount"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:fontFamily="serif-monospace"
+                android:padding="16dp"
+                android:text="Word Count: "
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/sentenceCount"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:fontFamily="serif-monospace"
+                android:padding="16dp"
+                android:text="Sentence Count: "
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif-monospace"
+                android:gravity="center|left"
+                android:padding="16dp"
+                android:text="Unique Word Count: "
+                android:textSize="15dp" />
+
+            <ScrollView
+                android:id="@+id/child_scroll"
+                android:layout_width="fill_parent"
+                android:layout_height="367dp">
+
+                <TextView
+                    android:id="@+id/uniqueText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="300dp"
+                    android:background="@android:color/darker_gray"
+                    android:fontFamily="serif-monospace"
+                    android:padding="16dp"
+                    android:scrollbars="vertical"
+                    android:text="Your long scrolling text goes here. This text will scroll vertically within the NestedScrollView."
+                    android:textSize="14dp" />
+
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif-monospace"
+                android:gravity="right"
+                android:padding="16dp"
+                android:text="Total: "
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif-monospace"
+                android:padding="16dp"
+                android:text="Word Distribution: "
+                android:textColor="#000080"
+                android:textSize="25dp" />
+
+            <com.anychart.AnyChartView
+                android:id="@+id/pieChart"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_marginVertical="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif-monospace"
+                android:padding="16dp"
+                android:text="Top Five Words: "
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/firstWord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif-monospace"
+                android:padding="16dp"
+                android:text="1:"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/secondWord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif-monospace"
+                android:padding="16dp"
+                android:text="2:"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/thirdWord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif-monospace"
+                android:padding="16dp"
+                android:text="3:"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/fourthWord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif-monospace"
+                android:padding="16dp"
+                android:text="4:"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/fifthWord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif-monospace"
+                android:padding="16dp"
+                android:text="5:"
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif-monospace"
+                android:padding="16dp"
+                android:text="Frequency: "
+                android:textColor="#000080"
+                android:textSize="25dp" />
+
+            <com.anychart.AnyChartView
+                android:id="@+id/barChart"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_marginVertical="20sp" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

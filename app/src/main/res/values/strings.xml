@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TextFileAnalyser</string>
+
+    <string-array name="text_arrays">
+        <item>PDF File</item>
+        <item>Text File</item>
+    </string-array>
+</resources>
